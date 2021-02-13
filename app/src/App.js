@@ -15,7 +15,7 @@ const App = () => {
           const { drizzle, drizzleState, initialized } = drizzleContext;
 
           if (!initialized) {
-            return "Hello Welcome"
+            return ("Hello Welcome")
           }
 
           return (
