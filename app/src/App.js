@@ -3,13 +3,15 @@ import { DrizzleContext } from "@drizzle/react-plugin";
 import { Drizzle } from "@drizzle/store";
 import drizzleOptions from "./drizzleOptions";
 import MyComponent from "./MyComponent";
+import Homepage from "./Components/Homepage";
 import "./App.css";
 
 const drizzle = new Drizzle(drizzleOptions);
 
 const App = () => {
   return (
-    <DrizzleContext.Provider drizzle={drizzle}>
+    <div>
+    {/* <DrizzleContext.Provider drizzle={drizzle}>
       <DrizzleContext.Consumer>
         {drizzleContext => {
           const { drizzle, drizzleState, initialized } = drizzleContext;
@@ -20,10 +22,13 @@ const App = () => {
 
           return (
             <MyComponent drizzle={drizzle} drizzleState={drizzleState} />
+          
           )
         }}
       </DrizzleContext.Consumer>
-    </DrizzleContext.Provider>
+    </DrizzleContext.Provider> */}
+    <Homepage />
+    </div>
   );
 }
 
